@@ -475,7 +475,7 @@ class WSGIServer(WebServer):
             if len(r) > 1:
                 res.phrase = r[1]
             else:
-                res.phrase = DEFAULT_PAGES[resp.code][0]
+                res.phrase = DEFAULT_PAGES[res.code][0]
             for k, v in headers:
                 res.add(k, v)
             res.add('Transfer-Encoding', 'chunked')
